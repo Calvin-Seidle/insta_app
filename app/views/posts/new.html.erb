@@ -1,0 +1,11 @@
+<div class="jumbotron text-center">
+	<h1 style="text-transform: uppercase;">New Post</h1>
+</div>
+
+<%= form_for @post do |f| %>
+
+	<h4><%= f.label :description %></h4>
+	<%= f.text_area :description, class:"form-control" %><br>
+	<%= f.submit "Submit", class:"btn btn-primary" %>
+
+<% end %>
