@@ -16,16 +16,17 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span> 
 	      </button>
-	      <%= link_to "InstaApp", root_url, class:"navbar-brand" %>
+	      <%= link_to '<i class="glyphicon glyphicon-ice-lolly-tasted"></i>'.html_safe, root_url, class:"navbar-brand" %>
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	      <ul class="nav navbar-nav">
-	        <li><%= link_to "New Post", new_post_path %></li>
+	        <li><%= link_to '<i class="glyphicon glyphicon-envelope"></i> New Post'.html_safe, new_post_path %></li>
 	        <% if current_user %>
-	        	<li><%= link_to('Log Out', destroy_user_session_path, :method => :delete) %></li>
+	        	<li><%= link_to('<i class="glyphicon glyphicon-log-out"></i> Log Out'.html_safe, destroy_user_session_path, :method => :delete) %></li>
 	        <% else %>
-	        	<li><%= link_to "Login", new_user_session_path %> </li>
-	        	<li><%= link_to "Sign Up", new_user_registration_path %> </li>
+	        	<li><%= link_to '<i class="glyphicon glyphicon-log-in"></i> Login'.html_safe, new_user_session_path %> </li>
+	        	
+	        	<li><%= link_to '<i class="glyphicon glyphicon-pencil"></i> Sign Up'.html_safe, new_user_registration_path %> </li>
 	        <% end %>
 
 	      </ul>
@@ -34,14 +35,16 @@
 			  <div class="input-group">
 			    <input type="text" class="form-control" placeholder="Search">
 			    <div class="input-group-btn">
+
 			      <button class="btn btn-primary" type="submit">
-			        Search
+			      	<span class="glyphicon glyphicon-search"></span>
 			      </button>
 			    </div>
 			  </div>
 			</form>
 	        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-	        <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+	        <!-- <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li> -->
+	        <li><%= link_to '<i class="glyphicon glyphicon-cog"></i> Account Settings'.html_safe, edit_user_registration_path %> </li>
 	      </ul>
 	    </div>
 	  </div>
